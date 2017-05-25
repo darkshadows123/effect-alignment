@@ -1,0 +1,831 @@
+{
+    "id": "conferenceCDR.jl",
+    "name": "conferenceCDR.jl",
+    "description": null,
+    "sourceColumns": [
+        {
+            "id": "HN2653",
+            "hNodeId": "HN2653",
+            "columnName": "conference_uri"
+        },
+        {
+            "id": "HN2548",
+            "hNodeId": "HN2548",
+            "columnName": "timestamp_iso"
+        },
+        {
+            "id": "HN112",
+            "hNodeId": "HN112",
+            "columnName": "meta_description"
+        },
+        {
+            "id": "HN114",
+            "hNodeId": "HN114",
+            "columnName": "meta_keywords"
+        },
+        {
+            "id": "HN122",
+            "hNodeId": "HN122",
+            "columnName": "title"
+        },
+        {
+            "id": "HN130",
+            "hNodeId": "HN130",
+            "columnName": "source_name"
+        },
+        {
+            "id": "HN9",
+            "hNodeId": "HN9",
+            "columnName": "_id"
+        },
+        {
+            "id": "HN2758",
+            "hNodeId": "HN2758",
+            "columnName": "datePublsihedISO"
+        },
+        {
+            "id": "HN118",
+            "hNodeId": "HN118",
+            "columnName": "text"
+        },
+        {
+            "id": "HN126",
+            "hNodeId": "HN126",
+            "columnName": "url"
+        },
+        {
+            "id": "HN2882",
+            "hNodeId": "HN2882",
+            "columnName": "cve_uri"
+        }
+    ],
+    "mappingToSourceColumns": [
+        {
+            "id": "HN9",
+            "sourceColumnId": "HN9"
+        },
+        {
+            "id": "HN122",
+            "sourceColumnId": "HN122"
+        },
+        {
+            "id": "HN2548",
+            "sourceColumnId": "HN2548"
+        },
+        {
+            "id": "HN114",
+            "sourceColumnId": "HN114"
+        },
+        {
+            "id": "HN2653",
+            "sourceColumnId": "HN2653"
+        },
+        {
+            "id": "HN112",
+            "sourceColumnId": "HN112"
+        },
+        {
+            "id": "HN126",
+            "sourceColumnId": "HN126"
+        },
+        {
+            "id": "HN2882",
+            "sourceColumnId": "HN2882"
+        },
+        {
+            "id": "HN118",
+            "sourceColumnId": "HN118"
+        },
+        {
+            "id": "HN2758",
+            "sourceColumnId": "HN2758"
+        },
+        {
+            "id": "HN130",
+            "sourceColumnId": "HN130"
+        }
+    ],
+    "graph": {
+        "nodes": [
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1",
+                "label": {
+                    "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                    "rdfsLabel": "Conference"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "HN2653",
+                "label": {
+                    "uri": "HN2653",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN2653",
+                "columnName": "conference_uri",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN2653",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN2653",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN2548",
+                "label": {
+                    "uri": "HN2548",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN2548",
+                "columnName": "timestamp_iso",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN2548",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.dig.isi.edu/ontology/dateRecorded",
+                            "rdfsLabel": "timestamp"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN2548",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                            "rdfsLabel": "Vulnerability"
+                        },
+                        "type": {
+                            "uri": "http://schema.dig.isi.edu/ontology/dateRecorded",
+                            "rdfsLabel": "timestamp"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN2548",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.dig.isi.edu/ontology/dateRecorded",
+                            "rdfsLabel": "timestamp"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN112",
+                "label": {
+                    "uri": "HN112",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN112",
+                "columnName": "meta_description",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN112",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/description",
+                            "rdfsLabel": "description"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN112",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/description",
+                            "rdfsLabel": "description"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN114",
+                "label": {
+                    "uri": "HN114",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN114",
+                "columnName": "meta_keywords",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN114",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/keywords",
+                            "rdfsLabel": "keywords"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN114",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/keywords",
+                            "rdfsLabel": "keywords"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Vulnerability1",
+                "label": {
+                    "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                    "rdfsLabel": "Vulnerability"
+                },
+                "type": "InternalNode",
+                "modelIds": null
+            },
+            {
+                "id": "HN122",
+                "label": {
+                    "uri": "HN122",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN122",
+                "columnName": "title",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN122",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name",
+                            "rdfsLabel": "name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN122",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/name",
+                            "rdfsLabel": "name"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN130",
+                "label": {
+                    "uri": "HN130",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN130",
+                "columnName": "source_name",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN130",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/publisher",
+                            "rdfsLabel": "publisher"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN130",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                            "rdfsLabel": "Vulnerability"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/publisher",
+                            "rdfsLabel": "publisher"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN130",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/publisher",
+                            "rdfsLabel": "publisher"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN9",
+                "label": {
+                    "uri": "HN9",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN9",
+                "columnName": "_id",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN9",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/source",
+                            "rdfsLabel": "source"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN9",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                            "rdfsLabel": "Vulnerability"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/source",
+                            "rdfsLabel": "source"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN9",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/source",
+                            "rdfsLabel": "source"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN2758",
+                "label": {
+                    "uri": "HN2758",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN2758",
+                "columnName": "datePublsihedISO",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN2758",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/startDate",
+                            "rdfsLabel": "startDate"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN2758",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/startDate",
+                            "rdfsLabel": "startDate"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN118",
+                "label": {
+                    "uri": "HN118",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN118",
+                "columnName": "text",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN118",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/text",
+                            "rdfsLabel": "text"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN118",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/text",
+                            "rdfsLabel": "text"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN126",
+                "label": {
+                    "uri": "HN126",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN126",
+                "columnName": "url",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN126",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/url",
+                            "rdfsLabel": "url"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN126",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Conference",
+                            "rdfsLabel": "Conference"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/url",
+                            "rdfsLabel": "url"
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": null,
+                "modelIds": null
+            },
+            {
+                "id": "HN2882",
+                "label": {
+                    "uri": "HN2882",
+                    "rdfsLabel": null
+                },
+                "type": "ColumnNode",
+                "hNodeId": "HN2882",
+                "columnName": "cve_uri",
+                "rdfLiteralType": null,
+                "language": "",
+                "userSemanticTypes": [
+                    {
+                        "hNodeId": "HN2882",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                            "rdfsLabel": "Vulnerability"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    },
+                    {
+                        "hNodeId": "HN2882",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                            "rdfsLabel": "Vulnerability"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "User",
+                        "confidenceScore": 1.0
+                    }
+                ],
+                "learnedSemanticTypes": [
+                    {
+                        "hNodeId": "HN2882",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/CVSS",
+                            "rdfsLabel": "CVSS"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.39553762000958376
+                    },
+                    {
+                        "hNodeId": "HN2882",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Vulnerability",
+                            "rdfsLabel": "Vulnerability"
+                        },
+                        "type": {
+                            "uri": "http://isi.edu/integration/karma/dev#classLink",
+                            "rdfsLabel": null
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.20892475998083243
+                    },
+                    {
+                        "hNodeId": "HN2882",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Topic",
+                            "rdfsLabel": "Topic"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/publisher",
+                            "rdfsLabel": "publisher"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.19776881000479188
+                    },
+                    {
+                        "hNodeId": "HN2882",
+                        "domain": {
+                            "uri": "http://schema.dig.isi.edu/ontology/Forum",
+                            "rdfsLabel": "Forum"
+                        },
+                        "type": {
+                            "uri": "http://schema.org/source",
+                            "rdfsLabel": "source"
+                        },
+                        "origin": "TfIdfModel",
+                        "confidenceScore": 0.19776881000479188
+                    }
+                ],
+                "modelIds": null
+            }
+        ],
+        "links": [
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://isi.edu/integration/karma/dev#classLink---HN2653",
+                "weight": 0.01,
+                "type": "ClassInstanceLink",
+                "label": {
+                    "uri": "http://isi.edu/integration/karma/dev#classLink",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "UriOfInstance",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.dig.isi.edu/ontology/dateRecorded---HN2548",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.dig.isi.edu/ontology/dateRecorded",
+                    "rdfsLabel": "timestamp"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/description---HN112",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/description",
+                    "rdfsLabel": "description"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/keywords---HN114",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/keywords",
+                    "rdfsLabel": "keywords"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/mentions---http://schema.dig.isi.edu/ontology/Vulnerability1",
+                "weight": 0.01,
+                "type": "ObjectPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/mentions",
+                    "rdfsLabel": "mentions"
+                },
+                "objectPropertyType": "None",
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/name---HN122",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/name",
+                    "rdfsLabel": "name"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/publisher---HN130",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/publisher",
+                    "rdfsLabel": "publisher"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/source---HN9",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/source",
+                    "rdfsLabel": "source"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/startDate---HN2758",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/startDate",
+                    "rdfsLabel": "startDate"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/text---HN118",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/text",
+                    "rdfsLabel": "text"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Conference1---http://schema.org/url---HN126",
+                "weight": 0.01,
+                "type": "DataPropertyLink",
+                "label": {
+                    "uri": "http://schema.org/url",
+                    "rdfsLabel": "url"
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "None",
+                "modelIds": null
+            },
+            {
+                "id": "http://schema.dig.isi.edu/ontology/Vulnerability1---http://isi.edu/integration/karma/dev#classLink---HN2882",
+                "weight": 0.01,
+                "type": "ClassInstanceLink",
+                "label": {
+                    "uri": "http://isi.edu/integration/karma/dev#classLink",
+                    "rdfsLabel": null
+                },
+                "status": "ForcedByUser",
+                "keyInfo": "UriOfInstance",
+                "modelIds": null
+            }
+        ]
+    }
+}

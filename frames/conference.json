@@ -1,0 +1,30 @@
+{
+	"@type": "Conference",
+	"@explicit": true,
+	"a": {},
+	"uri": {},
+	"url": {},
+	"startDate": {},
+	"text": {},
+	"description": {},
+	"name": {},
+	"keywords": {},
+	"source": {},
+	"publisher": {},
+	"dateRecorded": {},
+	"mentions": {
+	    "@type": "Vulnerability",
+	    "@explicit": true,
+	    "a": {},
+	    "uri": {},
+	    "startDate": {},
+	    "description": {},
+	    "name": {},
+	    "url": {},
+	    "sourcedFrom": {},
+	    "title": {},
+	    "source": {},
+	    "publisher": {},
+	    "dateRecorded": {}
+  	}
+}

@@ -14,12 +14,12 @@
 @prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix km-dev: <http://isi.edu/integration/karma/dev#> .
 
-_:node1baara4m4x1 a km-dev:R2RMLMapping ;
+_:node1bduhb37bx1 a km-dev:R2RMLMapping ;
 	km-dev:sourceName "hackingitems-for-karma.jl" ;
-	km-dev:modelPublicationTime "1488570356421"^^xsd:long ;
+	km-dev:modelPublicationTime "1492452216043"^^xsd:long ;
 	km-dev:modelVersion "1.7" ;
-	km-dev:hasInputColumns "[[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedTo\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedFrom\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemVendorRating\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemCategory\"}],[{\"columnName\":\"_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemDescription\"}],[{\"columnName\":\"source_name\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"marketplaceId\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"clusterName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemId\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"vendorId\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"postedDate\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"item_cve_final\"},{\"columnName\":\"Values\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"sellingPriceUsd\"}],[{\"columnName\":\"timestamp\"}]]" ;
-	km-dev:hasOutputColumns "[[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedTo\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"fromplace_uri\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedFrom\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemVendorRating\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"posted_date_iso\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemCategory\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"item_cve_final\"},{\"columnName\":\"cve_id_split\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemDescription\"}],[{\"columnName\":\"source_name_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemCve_split_comma\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"price_uri\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"clusterName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"item_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"vendor_id\"}],[{\"columnName\":\"dateRecorded\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"marketplace_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"toPlace_uri\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"sellingPriceUsd\"}],[{\"columnName\":\"cdr_id\"}]]" ;
+	km-dev:hasInputColumns "[[{\"columnName\":\"json_rep\"},{\"columnName\":\"vendorId\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemVendorRating\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"marketplaceId\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"sellingPriceUsd\"}],[{\"columnName\":\"timestamp\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"item_cve_final\"},{\"columnName\":\"Values\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"clusterName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"postedDate\"}],[{\"columnName\":\"source_name\"}],[{\"columnName\":\"_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemCategory\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedFrom\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedTo\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemDescription\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemId\"}]]" ;
+	km-dev:hasOutputColumns "[[{\"columnName\":\"json_rep\"},{\"columnName\":\"posted_date_iso\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"toPlace_uri\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"item_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemVendorRating\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"sellingPriceUsd\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemCve_split_comma\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"clusterName\"}],[{\"columnName\":\"cdr_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemName\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"item_cve_final\"},{\"columnName\":\"cve_id_split\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"price_uri\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemCategory\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedFrom\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"vendor_id\"}],[{\"columnName\":\"source_name_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemDescription\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"itemShippedTo\"}],[{\"columnName\":\"dateRecorded\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"marketplace_id\"}],[{\"columnName\":\"json_rep\"},{\"columnName\":\"fromplace_uri\"}]]" ;
 	km-dev:hasModelLabel "hacking_items" ;
 	km-dev:hasWorksheetHistory """[
     {
@@ -481,7 +481,7 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             },
             {
                 \"name\": \"transformationCode\",
-                \"value\": \"return \\\"vulnerability/\\\"+getValue(\\\"Values\\\").upper()\",
+                \"value\": \"t = getValue(\\\"Values\\\").upper()\\nif len(t) > 0:\\n  return \\\"vulnerability/\\\"+ t\",
                 \"type\": \"other\"
             },
             {
@@ -744,8 +744,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                     \"hasServiceProperties\": false,
                     \"hasPrefix\": false,
                     \"graphLabel\": \"\",
-                    \"GithubURL\": \"https://github.com/usc-isi-i2/effect-alignment/tree/master/models/asu-hacking-items\",
                     \"hasGithubURL\": true,
+                    \"GithubURL\": \"https://github.com/usc-isi-i2/effect-alignment/tree/master/models/asu-hacking-items\",
                     \"hasBaseURI\": false,
                     \"baseURI\": \"\"
                 },
@@ -784,8 +784,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                     \"hasServiceProperties\": false,
                     \"hasPrefix\": false,
                     \"graphLabel\": \"\",
-                    \"hasGithubURL\": true,
                     \"GithubURL\": \"https://github.com/usc-isi-i2/effect-alignment/tree/master/models/asu-hacking-items\",
+                    \"hasGithubURL\": true,
                     \"hasBaseURI\": false,
                     \"baseURI\": \"\"
                 },
@@ -866,8 +866,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/name\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"schema:Place1 (add)\",
                     \"DomainId\": \"http://schema.org/Place1\",
                     \"DomainUri\": \"http://schema.org/Place\"
@@ -927,8 +927,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/name\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"schema:Place2 (add)\",
                     \"DomainId\": \"http://schema.org/Place2\",
                     \"DomainUri\": \"http://schema.org/Place\"
@@ -988,8 +988,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/name\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:Exploit1 (add)\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
@@ -1064,8 +1064,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:SoftwareSystem1\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/SoftwareSystem1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/SoftwareSystem\"
@@ -1125,8 +1125,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.dig.isi.edu/ontology/hasType\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:Exploit1 (add)\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
@@ -1201,8 +1201,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:PersonOrOrganization1 (add)\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
@@ -1262,8 +1262,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/category\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:Exploit1 (add)\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
@@ -1323,8 +1323,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/description\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:Exploit1 (add)\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
@@ -1384,8 +1384,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/ratingValue\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:PersonOrOrganization1\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
@@ -1443,57 +1443,57 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [
                     {
-                        \"isProvenance\": true,
-                        \"isPrimary\": false,
                         \"FullType\": \"http://schema.org/source\",
+                        \"isPrimary\": false,
+                        \"isProvenance\": true,
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/source\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/source\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/source\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/source\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization2\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/source\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/source\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Vulnerability\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/source\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/source\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.org/PriceSpecification1\",
                         \"DomainUri\": \"http://schema.org/PriceSpecification\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/source\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/source\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.org/Place1\",
                         \"DomainUri\": \"http://schema.org/Place\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/source\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/source\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.org/Place2\",
                         \"DomainUri\": \"http://schema.org/Place\"
@@ -1552,57 +1552,57 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [
                     {
-                        \"isProvenance\": true,
-                        \"isPrimary\": false,
                         \"FullType\": \"http://schema.org/publisher\",
+                        \"isPrimary\": false,
+                        \"isProvenance\": true,
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/publisher\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/publisher\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/publisher\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/publisher\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization2\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/publisher\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/publisher\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Vulnerability\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/publisher\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/publisher\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.org/PriceSpecification1\",
                         \"DomainUri\": \"http://schema.org/PriceSpecification\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/publisher\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/publisher\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.org/Place1\",
                         \"DomainUri\": \"http://schema.org/Place\"
                     },
                     {
-                        \"FullType\": \"http://schema.org/publisher\",
-                        \"isPrimary\": false,
                         \"isProvenance\": true,
+                        \"isPrimary\": false,
+                        \"FullType\": \"http://schema.org/publisher\",
                         \"DomainLabel\": \"Exploit1\",
                         \"DomainId\": \"http://schema.org/Place2\",
                         \"DomainUri\": \"http://schema.org/Place\"
@@ -1678,8 +1678,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:PersonOrOrganization2 (add)\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization2\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
@@ -1739,8 +1739,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/price\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"schema:PriceSpecification1 (add)\",
                     \"DomainId\": \"http://schema.org/PriceSpecification1\",
                     \"DomainUri\": \"http://schema.org/PriceSpecification\"
@@ -1865,8 +1865,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://schema.org/datePosted\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:Exploit1\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
@@ -1942,8 +1942,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"memex:Vulnerability1\",
                     \"DomainId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
                     \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Vulnerability\"
@@ -2018,8 +2018,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"schema:PriceSpecification1\",
                     \"DomainId\": \"http://schema.org/PriceSpecification1\",
                     \"DomainUri\": \"http://schema.org/PriceSpecification\"
@@ -2094,8 +2094,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"schema:Place1\",
                     \"DomainId\": \"http://schema.org/Place1\",
                     \"DomainUri\": \"http://schema.org/Place\"
@@ -2170,8 +2170,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
             {
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [{
-                    \"isPrimary\": true,
                     \"FullType\": \"http://isi.edu/integration/karma/dev#classLink\",
+                    \"isPrimary\": true,
                     \"DomainLabel\": \"schema:Place2\",
                     \"DomainId\": \"http://schema.org/Place2\",
                     \"DomainUri\": \"http://schema.org/Place\"
@@ -2229,57 +2229,57 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"name\": \"SemanticTypesArray\",
                 \"value\": [
                     {
-                        \"isProvenance\": true,
-                        \"isPrimary\": true,
                         \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
+                        \"isPrimary\": true,
+                        \"isProvenance\": true,
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Vulnerability\"
                     },
                     {
-                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
-                        \"isPrimary\": true,
                         \"isProvenance\": true,
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
                     },
                     {
-                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
-                        \"isPrimary\": true,
                         \"isProvenance\": true,
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                     },
                     {
-                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
-                        \"isPrimary\": true,
                         \"isProvenance\": true,
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization2\",
                         \"DomainUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\"
                     },
                     {
-                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
-                        \"isPrimary\": true,
                         \"isProvenance\": true,
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.org/PriceSpecification1\",
                         \"DomainUri\": \"http://schema.org/PriceSpecification\"
                     },
                     {
-                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
-                        \"isPrimary\": true,
                         \"isProvenance\": true,
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.org/Place1\",
                         \"DomainUri\": \"http://schema.org/Place\"
                     },
                     {
-                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
-                        \"isPrimary\": true,
                         \"isProvenance\": true,
+                        \"isPrimary\": true,
+                        \"FullType\": \"http://schema.dig.isi.edu/ontology/dateRecorded\",
                         \"DomainLabel\": \"memex:Vulnerability1\",
                         \"DomainId\": \"http://schema.org/Place2\",
                         \"DomainUri\": \"http://schema.org/Place\"
@@ -2371,8 +2371,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"USD\",
                     \"edgeId\": \"http://schema.org/priceCurrency\",
-                    \"edgeTargetId\": \"USD1\",
                     \"edgeSourceId\": \"http://schema.org/PriceSpecification1\",
+                    \"edgeTargetId\": \"USD1\",
                     \"edgeSourceUri\": \"http://schema.org/PriceSpecification\"
                 },
                 \"type\": \"other\"
@@ -2404,8 +2404,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.org/Place\",
                     \"edgeId\": \"http://schema.org/fromLocation\",
-                    \"edgeTargetId\": \"http://schema.org/Place1\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
+                    \"edgeTargetId\": \"http://schema.org/Place1\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                 },
                 \"type\": \"other\"
@@ -2437,8 +2437,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.org/PriceSpecification\",
                     \"edgeId\": \"http://schema.org/priceSpecification\",
-                    \"edgeTargetId\": \"http://schema.org/PriceSpecification1\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
+                    \"edgeTargetId\": \"http://schema.org/PriceSpecification1\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                 },
                 \"type\": \"other\"
@@ -2470,8 +2470,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.org/Place\",
                     \"edgeId\": \"http://schema.org/toLocation\",
-                    \"edgeTargetId\": \"http://schema.org/Place2\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
+                    \"edgeTargetId\": \"http://schema.org/Place2\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                 },
                 \"type\": \"other\"
@@ -2503,8 +2503,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\",
                     \"edgeId\": \"http://schema.org/vendor\",
-                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
+                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization1\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                 },
                 \"type\": \"other\"
@@ -2536,8 +2536,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization\",
                     \"edgeId\": \"http://schema.org/seller\",
-                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization2\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
+                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/PersonOrOrganization2\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                 },
                 \"type\": \"other\"
@@ -2569,8 +2569,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.dig.isi.edu/ontology/Vulnerability\",
                     \"edgeId\": \"http://schema.dig.isi.edu/ontology/exploitsVulnerability\",
-                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
+                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Exploit\"
                 },
                 \"type\": \"other\"
@@ -2602,8 +2602,8 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
                 \"value\": {
                     \"edgeTargetUri\": \"http://schema.dig.isi.edu/ontology/Exploit\",
                     \"edgeId\": \"http://schema.dig.isi.edu/ontology/hasExploit\",
-                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"edgeSourceId\": \"http://schema.dig.isi.edu/ontology/Vulnerability1\",
+                    \"edgeTargetId\": \"http://schema.dig.isi.edu/ontology/Exploit1\",
                     \"edgeSourceUri\": \"http://schema.dig.isi.edu/ontology/Vulnerability\"
                 },
                 \"type\": \"other\"
@@ -2623,708 +2623,708 @@ _:node1baara4m4x1 a km-dev:R2RMLMapping ;
     }
 ]""" .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 a rr:TriplesMap .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 a rr:TriplesMap .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 .
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x2 rr:tableName "hackingitems-for-karma.jl" ;
+_:node1bduhb37bx2 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x2 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx2 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:logicalTable _:node1baara4m4x2 ;
-	rr:subjectMap _:node1baara4m4x3 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:logicalTable _:node1bduhb37bx2 ;
+	rr:subjectMap _:node1bduhb37bx3 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x3 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx3 .
 
-_:node1baara4m4x3 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx3 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.dig.isi.edu/ontology/Exploit1" ;
 	rr:class memex:Exploit ;
 	rr:template "item/{[\"json_rep\",\"itemId\"]}" ;
 	a km-dev:steinerTreeRootNode .
 
-km-dev:PredicateObjectMap_ea19006d-7b8d-482d-97e3-9b013ebb6a1e rr:predicate memex:hasType .
+km-dev:PredicateObjectMap_a115f019-93e0-4c6c-ba21-6643779e0387 rr:predicate memex:hasType .
 
-_:node1baara4m4x4 rr:column "[\"json_rep\",\"clusterName\"]" ;
+_:node1bduhb37bx4 rr:column "[\"json_rep\",\"clusterName\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x4 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx4 .
 
-km-dev:PredicateObjectMap_ea19006d-7b8d-482d-97e3-9b013ebb6a1e rr:objectMap _:node1baara4m4x4 .
+km-dev:PredicateObjectMap_a115f019-93e0-4c6c-ba21-6643779e0387 rr:objectMap _:node1bduhb37bx4 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_ea19006d-7b8d-482d-97e3-9b013ebb6a1e .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_a115f019-93e0-4c6c-ba21-6643779e0387 .
 
-km-dev:PredicateObjectMap_ea19006d-7b8d-482d-97e3-9b013ebb6a1e a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_a115f019-93e0-4c6c-ba21-6643779e0387 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ea19006d-7b8d-482d-97e3-9b013ebb6a1e .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a115f019-93e0-4c6c-ba21-6643779e0387 .
 
-km-dev:PredicateObjectMap_dfd6eb0b-1399-4baf-947c-af60c0139ebe rr:predicate schema:category .
+km-dev:PredicateObjectMap_7916e58c-72ac-488e-837d-97d75282a9b3 rr:predicate schema:category .
 
-_:node1baara4m4x5 rr:column "[\"json_rep\",\"itemCategory\"]" ;
+_:node1bduhb37bx5 rr:column "[\"json_rep\",\"itemCategory\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x5 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx5 .
 
-km-dev:PredicateObjectMap_dfd6eb0b-1399-4baf-947c-af60c0139ebe rr:objectMap _:node1baara4m4x5 .
+km-dev:PredicateObjectMap_7916e58c-72ac-488e-837d-97d75282a9b3 rr:objectMap _:node1bduhb37bx5 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_dfd6eb0b-1399-4baf-947c-af60c0139ebe .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_7916e58c-72ac-488e-837d-97d75282a9b3 .
 
-km-dev:PredicateObjectMap_dfd6eb0b-1399-4baf-947c-af60c0139ebe a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_7916e58c-72ac-488e-837d-97d75282a9b3 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dfd6eb0b-1399-4baf-947c-af60c0139ebe .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7916e58c-72ac-488e-837d-97d75282a9b3 .
 
-km-dev:PredicateObjectMap_3855bfb7-a8e6-4a21-831e-887cbf344be4 rr:predicate schema:datePosted .
+km-dev:PredicateObjectMap_f0f061ec-060d-4737-8783-430a199efffb rr:predicate schema:datePosted .
 
-_:node1baara4m4x6 rr:column "[\"json_rep\",\"posted_date_iso\"]" ;
+_:node1bduhb37bx6 rr:column "[\"json_rep\",\"posted_date_iso\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x6 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx6 .
 
-km-dev:PredicateObjectMap_3855bfb7-a8e6-4a21-831e-887cbf344be4 rr:objectMap _:node1baara4m4x6 .
+km-dev:PredicateObjectMap_f0f061ec-060d-4737-8783-430a199efffb rr:objectMap _:node1bduhb37bx6 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_3855bfb7-a8e6-4a21-831e-887cbf344be4 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_f0f061ec-060d-4737-8783-430a199efffb .
 
-km-dev:PredicateObjectMap_3855bfb7-a8e6-4a21-831e-887cbf344be4 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_f0f061ec-060d-4737-8783-430a199efffb a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3855bfb7-a8e6-4a21-831e-887cbf344be4 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f0f061ec-060d-4737-8783-430a199efffb .
 
-km-dev:PredicateObjectMap_c320ffdf-0eaf-49bb-b8bf-ad16c9a471d6 rr:predicate schema:description .
+km-dev:PredicateObjectMap_ba6649c3-ad7a-4b1a-a4df-51ac580f1251 rr:predicate schema:description .
 
-_:node1baara4m4x7 rr:column "[\"json_rep\",\"itemDescription\"]" ;
+_:node1bduhb37bx7 rr:column "[\"json_rep\",\"itemDescription\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x7 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx7 .
 
-km-dev:PredicateObjectMap_c320ffdf-0eaf-49bb-b8bf-ad16c9a471d6 rr:objectMap _:node1baara4m4x7 .
+km-dev:PredicateObjectMap_ba6649c3-ad7a-4b1a-a4df-51ac580f1251 rr:objectMap _:node1bduhb37bx7 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_c320ffdf-0eaf-49bb-b8bf-ad16c9a471d6 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_ba6649c3-ad7a-4b1a-a4df-51ac580f1251 .
 
-km-dev:PredicateObjectMap_c320ffdf-0eaf-49bb-b8bf-ad16c9a471d6 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_ba6649c3-ad7a-4b1a-a4df-51ac580f1251 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_c320ffdf-0eaf-49bb-b8bf-ad16c9a471d6 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ba6649c3-ad7a-4b1a-a4df-51ac580f1251 .
 
-km-dev:PredicateObjectMap_fed210b7-e6cd-4493-8764-5416fa176291 rr:predicate schema:name .
+km-dev:PredicateObjectMap_687f6770-a17b-410c-970d-9739fe2c551c rr:predicate schema:name .
 
-_:node1baara4m4x8 rr:column "[\"json_rep\",\"itemName\"]" ;
+_:node1bduhb37bx8 rr:column "[\"json_rep\",\"itemName\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x8 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx8 .
 
-km-dev:PredicateObjectMap_fed210b7-e6cd-4493-8764-5416fa176291 rr:objectMap _:node1baara4m4x8 .
+km-dev:PredicateObjectMap_687f6770-a17b-410c-970d-9739fe2c551c rr:objectMap _:node1bduhb37bx8 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_fed210b7-e6cd-4493-8764-5416fa176291 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_687f6770-a17b-410c-970d-9739fe2c551c .
 
-km-dev:PredicateObjectMap_fed210b7-e6cd-4493-8764-5416fa176291 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_687f6770-a17b-410c-970d-9739fe2c551c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fed210b7-e6cd-4493-8764-5416fa176291 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_687f6770-a17b-410c-970d-9739fe2c551c .
 
-km-dev:PredicateObjectMap_43ba400f-6161-44ed-9d85-e501e3a9fa5a rr:predicate schema:publisher .
+km-dev:PredicateObjectMap_1a6a5cf7-41b1-4b24-b129-3e1c9293a606 rr:predicate schema:publisher .
 
-_:node1baara4m4x9 rr:column "source_name" ;
+_:node1bduhb37bx9 rr:column "source_name" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x9 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx9 .
 
-km-dev:PredicateObjectMap_43ba400f-6161-44ed-9d85-e501e3a9fa5a rr:objectMap _:node1baara4m4x9 .
+km-dev:PredicateObjectMap_1a6a5cf7-41b1-4b24-b129-3e1c9293a606 rr:objectMap _:node1bduhb37bx9 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_43ba400f-6161-44ed-9d85-e501e3a9fa5a .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_1a6a5cf7-41b1-4b24-b129-3e1c9293a606 .
 
-km-dev:PredicateObjectMap_43ba400f-6161-44ed-9d85-e501e3a9fa5a a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_1a6a5cf7-41b1-4b24-b129-3e1c9293a606 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_43ba400f-6161-44ed-9d85-e501e3a9fa5a .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1a6a5cf7-41b1-4b24-b129-3e1c9293a606 .
 
-km-dev:PredicateObjectMap_b650e166-a9fe-4269-92e6-7e288ec270c3 rr:predicate schema:toLocation .
+km-dev:PredicateObjectMap_3c5e7649-0088-4406-83da-2822f065111e rr:predicate schema:source .
 
-km-dev:RefObjectMap_4066eed0-0201-4bf3-b49f-a14ac5ae3b0b a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
-
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_4066eed0-0201-4bf3-b49f-a14ac5ae3b0b .
-
-km-dev:PredicateObjectMap_b650e166-a9fe-4269-92e6-7e288ec270c3 rr:objectMap km-dev:RefObjectMap_4066eed0-0201-4bf3-b49f-a14ac5ae3b0b .
-
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_b650e166-a9fe-4269-92e6-7e288ec270c3 .
-
-km-dev:PredicateObjectMap_b650e166-a9fe-4269-92e6-7e288ec270c3 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
-
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b650e166-a9fe-4269-92e6-7e288ec270c3 .
-
-km-dev:PredicateObjectMap_ef21833c-6b0b-4994-a7a0-f81775afb5ef rr:predicate schema:priceSpecification .
-
-km-dev:RefObjectMap_e68c8739-2952-41cb-ab47-9d797c634c54 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
-
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_e68c8739-2952-41cb-ab47-9d797c634c54 .
-
-km-dev:PredicateObjectMap_ef21833c-6b0b-4994-a7a0-f81775afb5ef rr:objectMap km-dev:RefObjectMap_e68c8739-2952-41cb-ab47-9d797c634c54 .
-
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_ef21833c-6b0b-4994-a7a0-f81775afb5ef .
-
-km-dev:PredicateObjectMap_ef21833c-6b0b-4994-a7a0-f81775afb5ef a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
-
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ef21833c-6b0b-4994-a7a0-f81775afb5ef .
-
-km-dev:PredicateObjectMap_4f61a939-cd1c-4baa-b728-7808bb5d2709 rr:predicate schema:source .
-
-_:node1baara4m4x10 rr:column "_id" ;
+_:node1bduhb37bx10 rr:column "_id" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x10 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx10 .
 
-km-dev:PredicateObjectMap_4f61a939-cd1c-4baa-b728-7808bb5d2709 rr:objectMap _:node1baara4m4x10 .
+km-dev:PredicateObjectMap_3c5e7649-0088-4406-83da-2822f065111e rr:objectMap _:node1bduhb37bx10 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_4f61a939-cd1c-4baa-b728-7808bb5d2709 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_3c5e7649-0088-4406-83da-2822f065111e .
 
-km-dev:PredicateObjectMap_4f61a939-cd1c-4baa-b728-7808bb5d2709 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_3c5e7649-0088-4406-83da-2822f065111e a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_4f61a939-cd1c-4baa-b728-7808bb5d2709 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3c5e7649-0088-4406-83da-2822f065111e .
 
-km-dev:PredicateObjectMap_fda4068b-2956-465f-875a-03e16b908f99 rr:predicate schema:vendor .
+km-dev:PredicateObjectMap_668c62ec-7437-4a82-83bb-7653fda16ec8 rr:predicate schema:toLocation .
 
-km-dev:RefObjectMap_b29806ba-2fe0-45b4-8c43-ebc74f127866 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:RefObjectMap_639b02c8-2052-418a-930b-eb3ab52412c8 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_b29806ba-2fe0-45b4-8c43-ebc74f127866 .
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_639b02c8-2052-418a-930b-eb3ab52412c8 .
 
-km-dev:PredicateObjectMap_fda4068b-2956-465f-875a-03e16b908f99 rr:objectMap km-dev:RefObjectMap_b29806ba-2fe0-45b4-8c43-ebc74f127866 .
+km-dev:PredicateObjectMap_668c62ec-7437-4a82-83bb-7653fda16ec8 rr:objectMap km-dev:RefObjectMap_639b02c8-2052-418a-930b-eb3ab52412c8 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_fda4068b-2956-465f-875a-03e16b908f99 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_668c62ec-7437-4a82-83bb-7653fda16ec8 .
 
-km-dev:PredicateObjectMap_fda4068b-2956-465f-875a-03e16b908f99 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_668c62ec-7437-4a82-83bb-7653fda16ec8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_fda4068b-2956-465f-875a-03e16b908f99 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_668c62ec-7437-4a82-83bb-7653fda16ec8 .
 
-km-dev:PredicateObjectMap_6e3e2a3a-db47-45f2-9974-ec54d51ee742 rr:predicate schema:fromLocation .
+km-dev:PredicateObjectMap_1bfe09c4-47fc-4b6e-9da3-c320a0afb2bb rr:predicate schema:priceSpecification .
 
-km-dev:RefObjectMap_8e6e9db4-dbde-4f27-a2f8-fad72f02b849 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:RefObjectMap_d5d8a02a-5da9-4e73-b736-88f18cbbaca4 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_8e6e9db4-dbde-4f27-a2f8-fad72f02b849 .
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_d5d8a02a-5da9-4e73-b736-88f18cbbaca4 .
 
-km-dev:PredicateObjectMap_6e3e2a3a-db47-45f2-9974-ec54d51ee742 rr:objectMap km-dev:RefObjectMap_8e6e9db4-dbde-4f27-a2f8-fad72f02b849 .
+km-dev:PredicateObjectMap_1bfe09c4-47fc-4b6e-9da3-c320a0afb2bb rr:objectMap km-dev:RefObjectMap_d5d8a02a-5da9-4e73-b736-88f18cbbaca4 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_6e3e2a3a-db47-45f2-9974-ec54d51ee742 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_1bfe09c4-47fc-4b6e-9da3-c320a0afb2bb .
 
-km-dev:PredicateObjectMap_6e3e2a3a-db47-45f2-9974-ec54d51ee742 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_1bfe09c4-47fc-4b6e-9da3-c320a0afb2bb a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6e3e2a3a-db47-45f2-9974-ec54d51ee742 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1bfe09c4-47fc-4b6e-9da3-c320a0afb2bb .
 
-km-dev:PredicateObjectMap_ca81de00-8699-43bf-9738-ffc4421c4928 rr:predicate memex:exploitsVulnerability .
+km-dev:PredicateObjectMap_0dc3d33e-82d4-4c0f-b29f-f46fe430a86f rr:predicate schema:vendor .
 
-km-dev:RefObjectMap_42fa9794-7123-4a55-900d-7f1ebb868897 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_0a0365aa-0eed-43f8-9e52-a4ef26bcb044 ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:RefObjectMap_0b66a075-f652-4955-baf0-5727a089cec2 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_42fa9794-7123-4a55-900d-7f1ebb868897 .
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_0b66a075-f652-4955-baf0-5727a089cec2 .
 
-km-dev:PredicateObjectMap_ca81de00-8699-43bf-9738-ffc4421c4928 rr:objectMap km-dev:RefObjectMap_42fa9794-7123-4a55-900d-7f1ebb868897 .
+km-dev:PredicateObjectMap_0dc3d33e-82d4-4c0f-b29f-f46fe430a86f rr:objectMap km-dev:RefObjectMap_0b66a075-f652-4955-baf0-5727a089cec2 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_ca81de00-8699-43bf-9738-ffc4421c4928 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_0dc3d33e-82d4-4c0f-b29f-f46fe430a86f .
 
-km-dev:PredicateObjectMap_ca81de00-8699-43bf-9738-ffc4421c4928 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_0dc3d33e-82d4-4c0f-b29f-f46fe430a86f a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ca81de00-8699-43bf-9738-ffc4421c4928 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_0dc3d33e-82d4-4c0f-b29f-f46fe430a86f .
 
-km-dev:PredicateObjectMap_1f6856ee-2543-41f8-9f40-1d1fba56cd13 rr:predicate schema:seller .
+km-dev:PredicateObjectMap_30e33415-685f-4b54-91aa-2c8e73807547 rr:predicate schema:fromLocation .
 
-km-dev:RefObjectMap_9455e0b5-6289-439e-801f-884dfc035e64 a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_269d3a2d-bef9-43a4-b0dc-f67cadef70a6 ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:RefObjectMap_b385a9e7-a542-4879-abf7-6c6aa972e342 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_9455e0b5-6289-439e-801f-884dfc035e64 .
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_b385a9e7-a542-4879-abf7-6c6aa972e342 .
 
-km-dev:PredicateObjectMap_1f6856ee-2543-41f8-9f40-1d1fba56cd13 rr:objectMap km-dev:RefObjectMap_9455e0b5-6289-439e-801f-884dfc035e64 .
+km-dev:PredicateObjectMap_30e33415-685f-4b54-91aa-2c8e73807547 rr:objectMap km-dev:RefObjectMap_b385a9e7-a542-4879-abf7-6c6aa972e342 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_1f6856ee-2543-41f8-9f40-1d1fba56cd13 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_30e33415-685f-4b54-91aa-2c8e73807547 .
 
-km-dev:PredicateObjectMap_1f6856ee-2543-41f8-9f40-1d1fba56cd13 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_30e33415-685f-4b54-91aa-2c8e73807547 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_1f6856ee-2543-41f8-9f40-1d1fba56cd13 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_30e33415-685f-4b54-91aa-2c8e73807547 .
 
-km-dev:PredicateObjectMap_16608713-813d-422d-b85c-9ce117e18db4 rr:predicate memex:dateRecorded .
+km-dev:PredicateObjectMap_7d36ee7b-cb0e-436e-99d7-03e6f7801724 rr:predicate memex:dateRecorded .
 
-_:node1baara4m4x11 rr:column "dateRecorded" ;
+_:node1bduhb37bx11 rr:column "dateRecorded" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x11 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx11 .
 
-km-dev:PredicateObjectMap_16608713-813d-422d-b85c-9ce117e18db4 rr:objectMap _:node1baara4m4x11 .
+km-dev:PredicateObjectMap_7d36ee7b-cb0e-436e-99d7-03e6f7801724 rr:objectMap _:node1bduhb37bx11 .
 
-km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 rr:predicateObjectMap km-dev:PredicateObjectMap_16608713-813d-422d-b85c-9ce117e18db4 .
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_7d36ee7b-cb0e-436e-99d7-03e6f7801724 .
 
-km-dev:PredicateObjectMap_16608713-813d-422d-b85c-9ce117e18db4 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_7d36ee7b-cb0e-436e-99d7-03e6f7801724 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_16608713-813d-422d-b85c-9ce117e18db4 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_7d36ee7b-cb0e-436e-99d7-03e6f7801724 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c a rr:TriplesMap .
+km-dev:PredicateObjectMap_2247e59b-ad75-4ff4-b5d7-43ce321aa302 rr:predicate memex:exploitsVulnerability .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c .
+km-dev:RefObjectMap_9a9aa2de-a83e-4a16-a815-7c45476acfa5 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_4a2116de-6f29-4d1e-9826-07a66c10932b ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c km-dev:isPartOfMapping _:node1baara4m4x1 .
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_9a9aa2de-a83e-4a16-a815-7c45476acfa5 .
 
-_:node1baara4m4x12 rr:tableName "hackingitems-for-karma.jl" ;
+km-dev:PredicateObjectMap_2247e59b-ad75-4ff4-b5d7-43ce321aa302 rr:objectMap km-dev:RefObjectMap_9a9aa2de-a83e-4a16-a815-7c45476acfa5 .
+
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_2247e59b-ad75-4ff4-b5d7-43ce321aa302 .
+
+km-dev:PredicateObjectMap_2247e59b-ad75-4ff4-b5d7-43ce321aa302 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
+
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_2247e59b-ad75-4ff4-b5d7-43ce321aa302 .
+
+km-dev:PredicateObjectMap_d6c75a28-1cca-4592-b2b6-8f13b606a903 rr:predicate schema:seller .
+
+km-dev:RefObjectMap_96740101-ac6a-4821-afbf-4dd35898dd88 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_8fb1fa88-bd8d-4cc5-9a6f-105464195dac ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
+
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_96740101-ac6a-4821-afbf-4dd35898dd88 .
+
+km-dev:PredicateObjectMap_d6c75a28-1cca-4592-b2b6-8f13b606a903 rr:objectMap km-dev:RefObjectMap_96740101-ac6a-4821-afbf-4dd35898dd88 .
+
+km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 rr:predicateObjectMap km-dev:PredicateObjectMap_d6c75a28-1cca-4592-b2b6-8f13b606a903 .
+
+km-dev:PredicateObjectMap_d6c75a28-1cca-4592-b2b6-8f13b606a903 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
+
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d6c75a28-1cca-4592-b2b6-8f13b606a903 .
+
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 a rr:TriplesMap .
+
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 .
+
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 km-dev:isPartOfMapping _:node1bduhb37bx1 .
+
+_:node1bduhb37bx12 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x12 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx12 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c rr:logicalTable _:node1baara4m4x12 ;
-	rr:subjectMap _:node1baara4m4x13 .
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 rr:logicalTable _:node1bduhb37bx12 ;
+	rr:subjectMap _:node1bduhb37bx13 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x13 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx13 .
 
-_:node1baara4m4x13 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx13 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.dig.isi.edu/ontology/PersonOrOrganization1" ;
 	rr:class memex:PersonOrOrganization ;
 	rr:template "vendor_id/{[\"json_rep\",\"vendorId\"]}" .
 
-km-dev:PredicateObjectMap_3a0a452d-a47a-45d6-84e2-c1f9f04657e9 rr:predicate schema:publisher .
+km-dev:PredicateObjectMap_9a314b50-150d-477f-84d8-fa3abe76c6ed rr:predicate schema:publisher .
 
-_:node1baara4m4x14 rr:column "source_name" ;
+_:node1bduhb37bx14 rr:column "source_name" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x14 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx14 .
 
-km-dev:PredicateObjectMap_3a0a452d-a47a-45d6-84e2-c1f9f04657e9 rr:objectMap _:node1baara4m4x14 .
+km-dev:PredicateObjectMap_9a314b50-150d-477f-84d8-fa3abe76c6ed rr:objectMap _:node1bduhb37bx14 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c rr:predicateObjectMap km-dev:PredicateObjectMap_3a0a452d-a47a-45d6-84e2-c1f9f04657e9 .
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 rr:predicateObjectMap km-dev:PredicateObjectMap_9a314b50-150d-477f-84d8-fa3abe76c6ed .
 
-km-dev:PredicateObjectMap_3a0a452d-a47a-45d6-84e2-c1f9f04657e9 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_9a314b50-150d-477f-84d8-fa3abe76c6ed a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3a0a452d-a47a-45d6-84e2-c1f9f04657e9 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9a314b50-150d-477f-84d8-fa3abe76c6ed .
 
-km-dev:PredicateObjectMap_b9ce5e62-eefc-4d53-bbd2-6710e973f5ba rr:predicate schema:ratingValue .
+km-dev:PredicateObjectMap_a11c1eb8-67a4-42fe-b48c-aeb16b72ae28 rr:predicate schema:ratingValue .
 
-_:node1baara4m4x15 rr:column "[\"json_rep\",\"itemVendorRating\"]" ;
+_:node1bduhb37bx15 rr:column "[\"json_rep\",\"itemVendorRating\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x15 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx15 .
 
-km-dev:PredicateObjectMap_b9ce5e62-eefc-4d53-bbd2-6710e973f5ba rr:objectMap _:node1baara4m4x15 .
+km-dev:PredicateObjectMap_a11c1eb8-67a4-42fe-b48c-aeb16b72ae28 rr:objectMap _:node1bduhb37bx15 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c rr:predicateObjectMap km-dev:PredicateObjectMap_b9ce5e62-eefc-4d53-bbd2-6710e973f5ba .
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 rr:predicateObjectMap km-dev:PredicateObjectMap_a11c1eb8-67a4-42fe-b48c-aeb16b72ae28 .
 
-km-dev:PredicateObjectMap_b9ce5e62-eefc-4d53-bbd2-6710e973f5ba a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_a11c1eb8-67a4-42fe-b48c-aeb16b72ae28 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b9ce5e62-eefc-4d53-bbd2-6710e973f5ba .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a11c1eb8-67a4-42fe-b48c-aeb16b72ae28 .
 
-km-dev:PredicateObjectMap_defc79d3-b8be-42c5-8c6f-1b733db449fb rr:predicate schema:source .
+km-dev:PredicateObjectMap_3290ca3f-7bcd-4ad5-add6-262bceb28f3a rr:predicate memex:dateRecorded .
 
-_:node1baara4m4x16 rr:column "_id" ;
+_:node1bduhb37bx16 rr:column "dateRecorded" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x16 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx16 .
 
-km-dev:PredicateObjectMap_defc79d3-b8be-42c5-8c6f-1b733db449fb rr:objectMap _:node1baara4m4x16 .
+km-dev:PredicateObjectMap_3290ca3f-7bcd-4ad5-add6-262bceb28f3a rr:objectMap _:node1bduhb37bx16 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c rr:predicateObjectMap km-dev:PredicateObjectMap_defc79d3-b8be-42c5-8c6f-1b733db449fb .
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 rr:predicateObjectMap km-dev:PredicateObjectMap_3290ca3f-7bcd-4ad5-add6-262bceb28f3a .
 
-km-dev:PredicateObjectMap_defc79d3-b8be-42c5-8c6f-1b733db449fb a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_3290ca3f-7bcd-4ad5-add6-262bceb28f3a a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_defc79d3-b8be-42c5-8c6f-1b733db449fb .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3290ca3f-7bcd-4ad5-add6-262bceb28f3a .
 
-km-dev:PredicateObjectMap_84744069-31b3-4d37-9361-629e4158152e rr:predicate memex:dateRecorded .
+km-dev:PredicateObjectMap_5e6aa28b-9f2a-4efb-a7f9-89addc6c327c rr:predicate schema:source .
 
-_:node1baara4m4x17 rr:column "dateRecorded" ;
+_:node1bduhb37bx17 rr:column "_id" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x17 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx17 .
 
-km-dev:PredicateObjectMap_84744069-31b3-4d37-9361-629e4158152e rr:objectMap _:node1baara4m4x17 .
+km-dev:PredicateObjectMap_5e6aa28b-9f2a-4efb-a7f9-89addc6c327c rr:objectMap _:node1bduhb37bx17 .
 
-km-dev:TriplesMap_3e1dfd62-fe8b-4ed7-a8e6-c574bbe3f04c rr:predicateObjectMap km-dev:PredicateObjectMap_84744069-31b3-4d37-9361-629e4158152e .
+km-dev:TriplesMap_5d289a46-b6a1-45d1-83b2-01789335d545 rr:predicateObjectMap km-dev:PredicateObjectMap_5e6aa28b-9f2a-4efb-a7f9-89addc6c327c .
 
-km-dev:PredicateObjectMap_84744069-31b3-4d37-9361-629e4158152e a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_5e6aa28b-9f2a-4efb-a7f9-89addc6c327c a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_84744069-31b3-4d37-9361-629e4158152e .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_5e6aa28b-9f2a-4efb-a7f9-89addc6c327c .
 
-km-dev:TriplesMap_269d3a2d-bef9-43a4-b0dc-f67cadef70a6 a rr:TriplesMap .
+km-dev:TriplesMap_8fb1fa88-bd8d-4cc5-9a6f-105464195dac a rr:TriplesMap .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_269d3a2d-bef9-43a4-b0dc-f67cadef70a6 .
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_8fb1fa88-bd8d-4cc5-9a6f-105464195dac .
 
-km-dev:TriplesMap_269d3a2d-bef9-43a4-b0dc-f67cadef70a6 km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:TriplesMap_8fb1fa88-bd8d-4cc5-9a6f-105464195dac km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x18 rr:tableName "hackingitems-for-karma.jl" ;
+_:node1bduhb37bx18 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x18 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx18 .
 
-km-dev:TriplesMap_269d3a2d-bef9-43a4-b0dc-f67cadef70a6 rr:logicalTable _:node1baara4m4x18 ;
-	rr:subjectMap _:node1baara4m4x19 .
+km-dev:TriplesMap_8fb1fa88-bd8d-4cc5-9a6f-105464195dac rr:logicalTable _:node1bduhb37bx18 ;
+	rr:subjectMap _:node1bduhb37bx19 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x19 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx19 .
 
-_:node1baara4m4x19 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx19 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.dig.isi.edu/ontology/PersonOrOrganization2" ;
 	rr:class memex:PersonOrOrganization ;
 	rr:template "marketplace/{[\"json_rep\",\"marketplaceId\"]}" .
 
-km-dev:TriplesMap_0a0365aa-0eed-43f8-9e52-a4ef26bcb044 a rr:TriplesMap .
+km-dev:TriplesMap_4a2116de-6f29-4d1e-9826-07a66c10932b a rr:TriplesMap .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_0a0365aa-0eed-43f8-9e52-a4ef26bcb044 .
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_4a2116de-6f29-4d1e-9826-07a66c10932b .
 
-km-dev:TriplesMap_0a0365aa-0eed-43f8-9e52-a4ef26bcb044 km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:TriplesMap_4a2116de-6f29-4d1e-9826-07a66c10932b km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x20 rr:tableName "hackingitems-for-karma.jl" ;
+_:node1bduhb37bx20 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x20 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx20 .
 
-km-dev:TriplesMap_0a0365aa-0eed-43f8-9e52-a4ef26bcb044 rr:logicalTable _:node1baara4m4x20 ;
-	rr:subjectMap _:node1baara4m4x21 .
+km-dev:TriplesMap_4a2116de-6f29-4d1e-9826-07a66c10932b rr:logicalTable _:node1bduhb37bx20 ;
+	rr:subjectMap _:node1bduhb37bx21 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x21 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx21 .
 
-_:node1baara4m4x21 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx21 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.dig.isi.edu/ontology/Vulnerability1" ;
 	rr:class memex:Vulnerability ;
 	rr:template "{[\"json_rep\",\"item_cve_final\",\"cve_id_split\"]}" .
 
-km-dev:PredicateObjectMap_887a963d-7d47-446c-a8bf-612ae822d87e rr:predicate memex:hasExploit .
+km-dev:PredicateObjectMap_f3c74751-3335-4e82-be38-6401e6046415 rr:predicate memex:hasExploit .
 
-km-dev:RefObjectMap_10ced38d-8a57-42da-9587-aa24b3368e7d a rr:RefObjectMap , rr:ObjectMap ;
-	rr:parentTriplesMap km-dev:TriplesMap_df7ed5c6-2f3a-4be2-afd9-0af2ac1eac14 ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:RefObjectMap_9689fee3-f1a5-43ff-a272-4bc34c4d49a0 a rr:RefObjectMap , rr:ObjectMap ;
+	rr:parentTriplesMap km-dev:TriplesMap_e712315b-43cb-4419-8af6-133233e13c40 ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap km-dev:RefObjectMap_10ced38d-8a57-42da-9587-aa24b3368e7d .
+_:node1bduhb37bx1 km-dev:hasObjectMap km-dev:RefObjectMap_9689fee3-f1a5-43ff-a272-4bc34c4d49a0 .
 
-km-dev:PredicateObjectMap_887a963d-7d47-446c-a8bf-612ae822d87e rr:objectMap km-dev:RefObjectMap_10ced38d-8a57-42da-9587-aa24b3368e7d .
+km-dev:PredicateObjectMap_f3c74751-3335-4e82-be38-6401e6046415 rr:objectMap km-dev:RefObjectMap_9689fee3-f1a5-43ff-a272-4bc34c4d49a0 .
 
-km-dev:TriplesMap_0a0365aa-0eed-43f8-9e52-a4ef26bcb044 rr:predicateObjectMap km-dev:PredicateObjectMap_887a963d-7d47-446c-a8bf-612ae822d87e .
+km-dev:TriplesMap_4a2116de-6f29-4d1e-9826-07a66c10932b rr:predicateObjectMap km-dev:PredicateObjectMap_f3c74751-3335-4e82-be38-6401e6046415 .
 
-km-dev:PredicateObjectMap_887a963d-7d47-446c-a8bf-612ae822d87e a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_f3c74751-3335-4e82-be38-6401e6046415 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_887a963d-7d47-446c-a8bf-612ae822d87e .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f3c74751-3335-4e82-be38-6401e6046415 .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 a rr:TriplesMap .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a a rr:TriplesMap .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 .
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x22 rr:tableName "hackingitems-for-karma.jl" ;
+_:node1bduhb37bx22 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x22 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx22 .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 rr:logicalTable _:node1baara4m4x22 ;
-	rr:subjectMap _:node1baara4m4x23 .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a rr:logicalTable _:node1bduhb37bx22 ;
+	rr:subjectMap _:node1bduhb37bx23 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x23 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx23 .
 
-_:node1baara4m4x23 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx23 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.org/Place1" ;
 	rr:class schema:Place ;
 	rr:template "{[\"json_rep\",\"fromplace_uri\"]}" .
 
-km-dev:PredicateObjectMap_d3e08d38-e03b-4e14-b952-00579160902f rr:predicate schema:name .
+km-dev:PredicateObjectMap_2023b84a-459c-4293-b52e-cbb715d46d82 rr:predicate schema:name .
 
-_:node1baara4m4x24 rr:column "[\"json_rep\",\"itemShippedFrom\"]" ;
+_:node1bduhb37bx24 rr:column "[\"json_rep\",\"itemShippedFrom\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x24 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx24 .
 
-km-dev:PredicateObjectMap_d3e08d38-e03b-4e14-b952-00579160902f rr:objectMap _:node1baara4m4x24 .
+km-dev:PredicateObjectMap_2023b84a-459c-4293-b52e-cbb715d46d82 rr:objectMap _:node1bduhb37bx24 .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 rr:predicateObjectMap km-dev:PredicateObjectMap_d3e08d38-e03b-4e14-b952-00579160902f .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a rr:predicateObjectMap km-dev:PredicateObjectMap_2023b84a-459c-4293-b52e-cbb715d46d82 .
 
-km-dev:PredicateObjectMap_d3e08d38-e03b-4e14-b952-00579160902f a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_2023b84a-459c-4293-b52e-cbb715d46d82 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d3e08d38-e03b-4e14-b952-00579160902f .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_2023b84a-459c-4293-b52e-cbb715d46d82 .
 
-km-dev:PredicateObjectMap_9ae3b84b-96e1-4a18-86ab-3c1f7a30f16b rr:predicate schema:publisher .
+km-dev:PredicateObjectMap_b6f370c5-d9dc-4b1e-a4ec-12592977078b rr:predicate schema:publisher .
 
-_:node1baara4m4x25 rr:column "source_name" ;
+_:node1bduhb37bx25 rr:column "source_name" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x25 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx25 .
 
-km-dev:PredicateObjectMap_9ae3b84b-96e1-4a18-86ab-3c1f7a30f16b rr:objectMap _:node1baara4m4x25 .
+km-dev:PredicateObjectMap_b6f370c5-d9dc-4b1e-a4ec-12592977078b rr:objectMap _:node1bduhb37bx25 .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 rr:predicateObjectMap km-dev:PredicateObjectMap_9ae3b84b-96e1-4a18-86ab-3c1f7a30f16b .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a rr:predicateObjectMap km-dev:PredicateObjectMap_b6f370c5-d9dc-4b1e-a4ec-12592977078b .
 
-km-dev:PredicateObjectMap_9ae3b84b-96e1-4a18-86ab-3c1f7a30f16b a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_b6f370c5-d9dc-4b1e-a4ec-12592977078b a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_9ae3b84b-96e1-4a18-86ab-3c1f7a30f16b .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_b6f370c5-d9dc-4b1e-a4ec-12592977078b .
 
-km-dev:PredicateObjectMap_d5a7a6a1-ae48-4a3c-a84e-9df060e2c72c rr:predicate memex:dateRecorded .
+km-dev:PredicateObjectMap_f7c94441-86e7-45c5-95df-600e8f242ba7 rr:predicate memex:dateRecorded .
 
-_:node1baara4m4x26 rr:column "dateRecorded" ;
+_:node1bduhb37bx26 rr:column "dateRecorded" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x26 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx26 .
 
-km-dev:PredicateObjectMap_d5a7a6a1-ae48-4a3c-a84e-9df060e2c72c rr:objectMap _:node1baara4m4x26 .
+km-dev:PredicateObjectMap_f7c94441-86e7-45c5-95df-600e8f242ba7 rr:objectMap _:node1bduhb37bx26 .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 rr:predicateObjectMap km-dev:PredicateObjectMap_d5a7a6a1-ae48-4a3c-a84e-9df060e2c72c .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a rr:predicateObjectMap km-dev:PredicateObjectMap_f7c94441-86e7-45c5-95df-600e8f242ba7 .
 
-km-dev:PredicateObjectMap_d5a7a6a1-ae48-4a3c-a84e-9df060e2c72c a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_f7c94441-86e7-45c5-95df-600e8f242ba7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d5a7a6a1-ae48-4a3c-a84e-9df060e2c72c .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f7c94441-86e7-45c5-95df-600e8f242ba7 .
 
-km-dev:PredicateObjectMap_61d87f3c-faf4-4d74-b63b-515808b3cece rr:predicate schema:source .
+km-dev:PredicateObjectMap_ee8e4fec-470d-4fa1-a357-c0a598782859 rr:predicate schema:source .
 
-_:node1baara4m4x27 rr:column "_id" ;
+_:node1bduhb37bx27 rr:column "_id" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x27 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx27 .
 
-km-dev:PredicateObjectMap_61d87f3c-faf4-4d74-b63b-515808b3cece rr:objectMap _:node1baara4m4x27 .
+km-dev:PredicateObjectMap_ee8e4fec-470d-4fa1-a357-c0a598782859 rr:objectMap _:node1bduhb37bx27 .
 
-km-dev:TriplesMap_a12f0246-04a2-4de9-925a-ed67086698f5 rr:predicateObjectMap km-dev:PredicateObjectMap_61d87f3c-faf4-4d74-b63b-515808b3cece .
+km-dev:TriplesMap_655efc4e-b812-441f-a218-3b36a0fe089a rr:predicateObjectMap km-dev:PredicateObjectMap_ee8e4fec-470d-4fa1-a357-c0a598782859 .
 
-km-dev:PredicateObjectMap_61d87f3c-faf4-4d74-b63b-515808b3cece a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_ee8e4fec-470d-4fa1-a357-c0a598782859 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_61d87f3c-faf4-4d74-b63b-515808b3cece .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ee8e4fec-470d-4fa1-a357-c0a598782859 .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae a rr:TriplesMap .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b a rr:TriplesMap .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae .
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x28 rr:tableName "hackingitems-for-karma.jl" ;
+_:node1bduhb37bx28 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x28 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx28 .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae rr:logicalTable _:node1baara4m4x28 ;
-	rr:subjectMap _:node1baara4m4x29 .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b rr:logicalTable _:node1bduhb37bx28 ;
+	rr:subjectMap _:node1bduhb37bx29 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x29 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx29 .
 
-_:node1baara4m4x29 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx29 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.org/Place2" ;
 	rr:class schema:Place ;
 	rr:template "{[\"json_rep\",\"toPlace_uri\"]}" .
 
-km-dev:PredicateObjectMap_de3bf066-6299-4a1d-b2e0-a0f895b8d8fa rr:predicate schema:name .
+km-dev:PredicateObjectMap_121f69bf-a440-43ca-8533-b650013b12a1 rr:predicate schema:name .
 
-_:node1baara4m4x30 rr:column "[\"json_rep\",\"itemShippedTo\"]" ;
+_:node1bduhb37bx30 rr:column "[\"json_rep\",\"itemShippedTo\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x30 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx30 .
 
-km-dev:PredicateObjectMap_de3bf066-6299-4a1d-b2e0-a0f895b8d8fa rr:objectMap _:node1baara4m4x30 .
+km-dev:PredicateObjectMap_121f69bf-a440-43ca-8533-b650013b12a1 rr:objectMap _:node1bduhb37bx30 .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae rr:predicateObjectMap km-dev:PredicateObjectMap_de3bf066-6299-4a1d-b2e0-a0f895b8d8fa .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b rr:predicateObjectMap km-dev:PredicateObjectMap_121f69bf-a440-43ca-8533-b650013b12a1 .
 
-km-dev:PredicateObjectMap_de3bf066-6299-4a1d-b2e0-a0f895b8d8fa a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_121f69bf-a440-43ca-8533-b650013b12a1 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_de3bf066-6299-4a1d-b2e0-a0f895b8d8fa .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_121f69bf-a440-43ca-8533-b650013b12a1 .
 
-km-dev:PredicateObjectMap_937a6f7f-0999-49ae-bda2-60f3e624ca26 rr:predicate schema:publisher .
+km-dev:PredicateObjectMap_a5d62712-3b53-49ba-a490-0324145af7b3 rr:predicate schema:publisher .
 
-_:node1baara4m4x31 rr:column "source_name" ;
+_:node1bduhb37bx31 rr:column "source_name" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x31 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx31 .
 
-km-dev:PredicateObjectMap_937a6f7f-0999-49ae-bda2-60f3e624ca26 rr:objectMap _:node1baara4m4x31 .
+km-dev:PredicateObjectMap_a5d62712-3b53-49ba-a490-0324145af7b3 rr:objectMap _:node1bduhb37bx31 .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae rr:predicateObjectMap km-dev:PredicateObjectMap_937a6f7f-0999-49ae-bda2-60f3e624ca26 .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b rr:predicateObjectMap km-dev:PredicateObjectMap_a5d62712-3b53-49ba-a490-0324145af7b3 .
 
-km-dev:PredicateObjectMap_937a6f7f-0999-49ae-bda2-60f3e624ca26 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_a5d62712-3b53-49ba-a490-0324145af7b3 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_937a6f7f-0999-49ae-bda2-60f3e624ca26 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_a5d62712-3b53-49ba-a490-0324145af7b3 .
 
-km-dev:PredicateObjectMap_cf279284-17a0-44a0-bdb7-bea28a8f0315 rr:predicate memex:dateRecorded .
+km-dev:PredicateObjectMap_6052d97e-87e8-4438-8d78-60a3765091d8 rr:predicate schema:source .
 
-_:node1baara4m4x32 rr:column "dateRecorded" ;
+_:node1bduhb37bx32 rr:column "_id" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x32 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx32 .
 
-km-dev:PredicateObjectMap_cf279284-17a0-44a0-bdb7-bea28a8f0315 rr:objectMap _:node1baara4m4x32 .
+km-dev:PredicateObjectMap_6052d97e-87e8-4438-8d78-60a3765091d8 rr:objectMap _:node1bduhb37bx32 .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae rr:predicateObjectMap km-dev:PredicateObjectMap_cf279284-17a0-44a0-bdb7-bea28a8f0315 .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b rr:predicateObjectMap km-dev:PredicateObjectMap_6052d97e-87e8-4438-8d78-60a3765091d8 .
 
-km-dev:PredicateObjectMap_cf279284-17a0-44a0-bdb7-bea28a8f0315 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_6052d97e-87e8-4438-8d78-60a3765091d8 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_cf279284-17a0-44a0-bdb7-bea28a8f0315 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_6052d97e-87e8-4438-8d78-60a3765091d8 .
 
-km-dev:PredicateObjectMap_efa138d7-2992-47bb-b9da-4cb1f4f57550 rr:predicate schema:source .
+km-dev:PredicateObjectMap_90651c84-2b58-413c-9d3c-b70e05a78ea7 rr:predicate memex:dateRecorded .
 
-_:node1baara4m4x33 rr:column "_id" ;
+_:node1bduhb37bx33 rr:column "dateRecorded" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x33 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx33 .
 
-km-dev:PredicateObjectMap_efa138d7-2992-47bb-b9da-4cb1f4f57550 rr:objectMap _:node1baara4m4x33 .
+km-dev:PredicateObjectMap_90651c84-2b58-413c-9d3c-b70e05a78ea7 rr:objectMap _:node1bduhb37bx33 .
 
-km-dev:TriplesMap_da35c5e0-84dc-455a-a1b9-e6aef99a55ae rr:predicateObjectMap km-dev:PredicateObjectMap_efa138d7-2992-47bb-b9da-4cb1f4f57550 .
+km-dev:TriplesMap_8fa526ed-4884-4d57-9afd-d42f28bec90b rr:predicateObjectMap km-dev:PredicateObjectMap_90651c84-2b58-413c-9d3c-b70e05a78ea7 .
 
-km-dev:PredicateObjectMap_efa138d7-2992-47bb-b9da-4cb1f4f57550 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_90651c84-2b58-413c-9d3c-b70e05a78ea7 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_efa138d7-2992-47bb-b9da-4cb1f4f57550 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_90651c84-2b58-413c-9d3c-b70e05a78ea7 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 a rr:TriplesMap .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 a rr:TriplesMap .
 
-_:node1baara4m4x1 km-dev:hasTriplesMap km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 .
+_:node1bduhb37bx1 km-dev:hasTriplesMap km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x34 rr:tableName "hackingitems-for-karma.jl" ;
+_:node1bduhb37bx34 rr:tableName "hackingitems-for-karma.jl" ;
 	a rr:LogicalTable ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasLogicalTable _:node1baara4m4x34 .
+_:node1bduhb37bx1 km-dev:hasLogicalTable _:node1bduhb37bx34 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 rr:logicalTable _:node1baara4m4x34 ;
-	rr:subjectMap _:node1baara4m4x35 .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 rr:logicalTable _:node1bduhb37bx34 ;
+	rr:subjectMap _:node1bduhb37bx35 .
 
-_:node1baara4m4x1 km-dev:hasSubjectMap _:node1baara4m4x35 .
+_:node1bduhb37bx1 km-dev:hasSubjectMap _:node1bduhb37bx35 .
 
-_:node1baara4m4x35 km-dev:isPartOfMapping _:node1baara4m4x1 ;
+_:node1bduhb37bx35 km-dev:isPartOfMapping _:node1bduhb37bx1 ;
 	a rr:SubjectMap ;
 	km-dev:alignmentNodeId "http://schema.org/PriceSpecification1" ;
 	rr:class schema:PriceSpecification ;
 	rr:template "price/{[\"json_rep\",\"sellingPriceUsd\"]}USD" .
 
-km-dev:PredicateObjectMap_927740de-dea1-4e02-b962-8a533e0acd50 rr:predicate memex:dateRecorded .
+km-dev:PredicateObjectMap_f0ffabc0-864d-4c2f-a91c-e14470e80b12 rr:predicate memex:dateRecorded .
 
-_:node1baara4m4x36 rr:column "dateRecorded" ;
+_:node1bduhb37bx36 rr:column "dateRecorded" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x36 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx36 .
 
-km-dev:PredicateObjectMap_927740de-dea1-4e02-b962-8a533e0acd50 rr:objectMap _:node1baara4m4x36 .
+km-dev:PredicateObjectMap_f0ffabc0-864d-4c2f-a91c-e14470e80b12 rr:objectMap _:node1bduhb37bx36 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 rr:predicateObjectMap km-dev:PredicateObjectMap_927740de-dea1-4e02-b962-8a533e0acd50 .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 rr:predicateObjectMap km-dev:PredicateObjectMap_f0ffabc0-864d-4c2f-a91c-e14470e80b12 .
 
-km-dev:PredicateObjectMap_927740de-dea1-4e02-b962-8a533e0acd50 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_f0ffabc0-864d-4c2f-a91c-e14470e80b12 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_927740de-dea1-4e02-b962-8a533e0acd50 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_f0ffabc0-864d-4c2f-a91c-e14470e80b12 .
 
-km-dev:PredicateObjectMap_afa9cbfb-4222-4eeb-80c8-f00c9e265654 rr:predicate schema:price .
+km-dev:PredicateObjectMap_21fccb04-9ae4-4101-ab6e-8612185be785 rr:predicate schema:price .
 
-_:node1baara4m4x37 rr:column "[\"json_rep\",\"sellingPriceUsd\"]" ;
+_:node1bduhb37bx37 rr:column "[\"json_rep\",\"sellingPriceUsd\"]" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x37 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx37 .
 
-km-dev:PredicateObjectMap_afa9cbfb-4222-4eeb-80c8-f00c9e265654 rr:objectMap _:node1baara4m4x37 .
+km-dev:PredicateObjectMap_21fccb04-9ae4-4101-ab6e-8612185be785 rr:objectMap _:node1bduhb37bx37 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 rr:predicateObjectMap km-dev:PredicateObjectMap_afa9cbfb-4222-4eeb-80c8-f00c9e265654 .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 rr:predicateObjectMap km-dev:PredicateObjectMap_21fccb04-9ae4-4101-ab6e-8612185be785 .
 
-km-dev:PredicateObjectMap_afa9cbfb-4222-4eeb-80c8-f00c9e265654 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_21fccb04-9ae4-4101-ab6e-8612185be785 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_afa9cbfb-4222-4eeb-80c8-f00c9e265654 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_21fccb04-9ae4-4101-ab6e-8612185be785 .
 
-km-dev:PredicateObjectMap_d03e5577-fe2f-44d4-a1cc-783b977aa4ae rr:predicate schema:priceCurrency .
+km-dev:PredicateObjectMap_16a655f0-c858-456d-8028-003f45cf1821 rr:predicate schema:priceCurrency .
 
-_:node1baara4m4x38 rr:constant "USD" ;
+_:node1bduhb37bx38 rr:constant "USD" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x38 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx38 .
 
-km-dev:PredicateObjectMap_d03e5577-fe2f-44d4-a1cc-783b977aa4ae rr:objectMap _:node1baara4m4x38 .
+km-dev:PredicateObjectMap_16a655f0-c858-456d-8028-003f45cf1821 rr:objectMap _:node1bduhb37bx38 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 rr:predicateObjectMap km-dev:PredicateObjectMap_d03e5577-fe2f-44d4-a1cc-783b977aa4ae .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 rr:predicateObjectMap km-dev:PredicateObjectMap_16a655f0-c858-456d-8028-003f45cf1821 .
 
-km-dev:PredicateObjectMap_d03e5577-fe2f-44d4-a1cc-783b977aa4ae a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_16a655f0-c858-456d-8028-003f45cf1821 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_d03e5577-fe2f-44d4-a1cc-783b977aa4ae .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_16a655f0-c858-456d-8028-003f45cf1821 .
 
-km-dev:PredicateObjectMap_ffce67e2-ae1e-4cdf-bd65-ff11343b1b13 rr:predicate schema:publisher .
+km-dev:PredicateObjectMap_dc16a712-b687-486c-b344-1e5796778d18 rr:predicate schema:publisher .
 
-_:node1baara4m4x39 rr:column "source_name" ;
+_:node1bduhb37bx39 rr:column "source_name" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x39 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx39 .
 
-km-dev:PredicateObjectMap_ffce67e2-ae1e-4cdf-bd65-ff11343b1b13 rr:objectMap _:node1baara4m4x39 .
+km-dev:PredicateObjectMap_dc16a712-b687-486c-b344-1e5796778d18 rr:objectMap _:node1bduhb37bx39 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 rr:predicateObjectMap km-dev:PredicateObjectMap_ffce67e2-ae1e-4cdf-bd65-ff11343b1b13 .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 rr:predicateObjectMap km-dev:PredicateObjectMap_dc16a712-b687-486c-b344-1e5796778d18 .
 
-km-dev:PredicateObjectMap_ffce67e2-ae1e-4cdf-bd65-ff11343b1b13 a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_dc16a712-b687-486c-b344-1e5796778d18 a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_ffce67e2-ae1e-4cdf-bd65-ff11343b1b13 .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_dc16a712-b687-486c-b344-1e5796778d18 .
 
-km-dev:PredicateObjectMap_44180130-de50-4fd9-9220-28dbde2a7a2d rr:predicate schema:source .
+km-dev:PredicateObjectMap_3f053916-9d2f-4916-b4e3-b831e235c0ff rr:predicate schema:source .
 
-_:node1baara4m4x40 rr:column "_id" ;
+_:node1bduhb37bx40 rr:column "_id" ;
 	a rr:ObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasObjectMap _:node1baara4m4x40 .
+_:node1bduhb37bx1 km-dev:hasObjectMap _:node1bduhb37bx40 .
 
-km-dev:PredicateObjectMap_44180130-de50-4fd9-9220-28dbde2a7a2d rr:objectMap _:node1baara4m4x40 .
+km-dev:PredicateObjectMap_3f053916-9d2f-4916-b4e3-b831e235c0ff rr:objectMap _:node1bduhb37bx40 .
 
-km-dev:TriplesMap_96efbd80-fbdd-4771-9a3b-737aaa8a8b74 rr:predicateObjectMap km-dev:PredicateObjectMap_44180130-de50-4fd9-9220-28dbde2a7a2d .
+km-dev:TriplesMap_5d2a9947-db90-4cbd-b406-6123a61205c6 rr:predicateObjectMap km-dev:PredicateObjectMap_3f053916-9d2f-4916-b4e3-b831e235c0ff .
 
-km-dev:PredicateObjectMap_44180130-de50-4fd9-9220-28dbde2a7a2d a rr:PredicateObjectMap ;
-	km-dev:isPartOfMapping _:node1baara4m4x1 .
+km-dev:PredicateObjectMap_3f053916-9d2f-4916-b4e3-b831e235c0ff a rr:PredicateObjectMap ;
+	km-dev:isPartOfMapping _:node1bduhb37bx1 .
 
-_:node1baara4m4x1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_44180130-de50-4fd9-9220-28dbde2a7a2d .
+_:node1bduhb37bx1 km-dev:hasPredicateObjectMap km-dev:PredicateObjectMap_3f053916-9d2f-4916-b4e3-b831e235c0ff .
